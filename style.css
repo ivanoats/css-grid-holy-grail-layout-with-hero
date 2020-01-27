@@ -1,0 +1,50 @@
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "hero hero hero"
+    "leftside content rightside"
+    "footer footer footer";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1ft auto;
+  grid-gap: 10px;
+
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  background-color: darksalmon;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: bisque;
+}
+
+main {
+  grid-area: content;
+  background-color: coral;
+}
+
+.rightside {
+  grid-area: rightside;
+  background-color: cornflowerblue;
+}
+
+.leftside {
+  grid-area: leftside;
+  background-color: aquamarine;
+}
+
+footer {
+  grid-area: footer;
+  background-color: aliceblue;
+}
