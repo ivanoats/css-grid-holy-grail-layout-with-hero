@@ -48,3 +48,31 @@ footer {
   grid-area: footer;
   background-color: aliceblue;
 }
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "hero"
+      "content"
+      "leftside"
+      "rightside"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      auto /* nav */
+      auto /* hero */
+      minmax(75px, auto) /* rightside */
+      1fr /* Content */
+      minmax(75px, auto) /* leftside */
+      auto; /* footer */
+  }
+
+  .leftside,
+  .rightside {
+    margin: 0;
+  }
+}
